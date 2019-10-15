@@ -83,7 +83,11 @@ Running mock tests can be done like so:
 Running integration tests can be done like so (requires existing jenkins instance):
 
 	./gradlew clean build integTest 
-	
+
+Jenkins instance requirements
+- CSRF protection enabled
+- 
+
 # Additional Resources
 
 * [Jenkins REST API](http://wiki.jenkins-ci.org/display/JENKINS/Remote+access+API)
