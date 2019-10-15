@@ -90,7 +90,7 @@ Jenkins instance requirements
 - [CSRF protection enabled](https://wiki.jenkins.io/display/JENKINS/CSRF+Protection)
 - [CloudBees Credentials](https://plugins.jenkins.io/cloudbees-credentials): otherwise an http 500 error occurs when accessing
 to http://127.0.0.1:8080/job/test-folder/job/test-folder-1/ `java.lang.NoClassDefFoundError: com/cloudbees/hudson/plugins/folder/properties/FolderCredentialsProvider`
-
+- an `admin` user
 
 Integration tests configuration
 - jenkins url and authentication method used by the tests are defined in the `gradle.properties` file
