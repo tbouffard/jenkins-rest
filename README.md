@@ -84,9 +84,24 @@ Running integration tests can be done like so (requires existing jenkins instanc
 
 	./gradlew clean build integTest 
 
+### Integration tests settings
+
 Jenkins instance requirements
-- CSRF protection enabled
-- 
+- [CSRF protection enabled](https://wiki.jenkins.io/display/JENKINS/CSRF+Protection)
+- [CloudBees Credentials](https://plugins.jenkins.io/cloudbees-credentials): otherwise an http 500 error occurs when accessing
+to http://127.0.0.1:8080/job/test-folder/job/test-folder-1/ `java.lang.NoClassDefFoundError: com/cloudbees/hudson/plugins/folder/properties/FolderCredentialsProvider`
+
+
+Integration tests configuration
+- jenkins url and authentication method used by the tests are defined in the `gradle.properties` file
+- by default, tests use the `credentials` authentication but this can be changed to use the `token` authentication
+
+
+Running integration tests from within your IDE
+- the `integTest` gradle tasks set various System Properties
+- if you don't want to use gradle as tests runner in your IDE, configure the tests with the same kind of System Properties
+
+
 
 # Additional Resources
 
