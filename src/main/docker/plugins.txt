@@ -1,5 +1,2 @@
-#credentials:2.3.0
-#configuration-as-code:1.32
-cloudbees-credentials:3.3
-# enables html markup
 antisamy-markup-formatter:1.6
+cloudbees-credentials:3.3
